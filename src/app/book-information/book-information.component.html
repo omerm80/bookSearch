@@ -1,0 +1,30 @@
+
+<div class="container-fluid">
+<h6 mat-dialog-title>{{data.book.name}}</h6>
+ <mat-dialog-content><p>authors :{{data.book.author}}
+</p><br>
+<p>
+    published Date: {{data.book.publishDate}}
+</p><br>
+<p>
+        Category: {{data.book.category}}
+    </p><br>
+    <p>
+            publisher Company: {{data.book.publisherCompany}}
+        </p><br>
+        <p>
+                rating: {{data.book.rating}}
+            </p><br>
+                  <div class="image-parent">
+                        <img src="{{data.book.image}}" class="img-fluid" alt="quixote">
+                    </div>
+
+
+</mat-dialog-content>
+ <mat-dialog-actions align="center">
+     <button mat-button (click)="cancelPop()">Close</button>
+     <button mat-raised-button (click)="save(data.book)">Add To Wish List</button>
+
+     
+</mat-dialog-actions>
+</div>

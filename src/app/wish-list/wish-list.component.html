@@ -1,0 +1,10 @@
+<div class="container">
+    <ul class="list-group">
+        <li class="list-group-item  list-group-item-action list-group-item-primary" *ngFor="let book of wishListBooks"> 
+            {{book.name}}
+            <button type="button"  (click)="removeBookFromWishList(book)" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </li>  
+    </ul>
+</div>

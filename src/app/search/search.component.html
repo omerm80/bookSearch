@@ -1,0 +1,43 @@
+<div class="container-fluid">
+  
+
+    <div>   
+        <form class="form-signin">
+         
+            <div class="active-cyan-3 active-cyan-4 mb-4">
+                    <input class="form-control" type="text" placeholder="Search for a book"  #search  aria-label="Search">
+                    <button class="btn btn-primary" (click)="OnSearch(search.value,0)">Search</button>
+                </div>
+        </form>    
+    </div>
+    <hr>
+   
+        <ul class="list-group" >
+            <li class="list-group-item  list-group-item-action  list-group-item-primary d-flex justify-content-between align-items-center" *ngFor="let book of selectedBooks; let i = index"> 
+                  {{book.name}} 
+                  <div class="image-parent">
+                        <img src="{{book.image}}" class="img-fluid" alt="quixote">
+                    </div>
+                  <button  mat-raised-button (click)="openDialog(book)">&#9432;</button>                    
+                
+
+            </li>            
+        </ul>
+
+
+    <div class="navigateResult">
+            <button [disabled]="startIndex<itemsPerPage" class="btn btn-default" (click)="OnSearch(search.value,startIndex-itemsPerPage)">
+                    Previous &laquo;
+            </button>
+            <button [disabled]="isNextButtonDisabled" class="btn btn-default" (click)="OnSearch(search.value,startIndex+itemsPerPage)">
+                    Next &raquo;
+            </button>
+        </div>          
+</div>
+
+
+
+
+   
+
+

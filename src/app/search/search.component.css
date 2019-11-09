@@ -1,0 +1,24 @@
+.header
+{
+    text-align: center;
+}
+.form-signin {
+    width: 100%;
+  }
+  .navigateResult
+  {
+      text-align: center;
+      
+  }
+  .image-parent {
+    max-width: 40px;
+    display: block;
+    margin: 0 auto;
+
+  }
+  .list-group-item {
+  }
+  .active-pink-3 input[type=text] {
+    border: 1px solid #f48fb1;
+    box-shadow: 0 0 0 1px #f48fb1;
+    }
